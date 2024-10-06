@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highly Reviewed Courses</title>
+</head>
+<body>
+    <h1>Popular Courses with High Reviews</h1>
+
+    <ul>
+        {% for course in courses.itertuples() %}
+        <li>
+            <a href="{{ course._2 }}">{{ course.course_name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Back to Homepage</a>
+</body>
+</html>
